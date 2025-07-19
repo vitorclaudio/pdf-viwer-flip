@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/pdf-viewer-flip/static/js/main.e80d4934.js",
+    "index.html": "/pdf-viewer-flip/index.html",
+    "main.e80d4934.js.map": "/pdf-viewer-flip/static/js/main.e80d4934.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.e80d4934.js"
+  ]
+}

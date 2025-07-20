@@ -2,12 +2,13 @@ import React from 'react';
 import FlipBook from './FlipBook';
 
 function App() {
-  return (
-      <div>
-        <h1>Visualizador de PDF com Animação</h1>
-        <FlipBook pdfPath="/sample.pdf" />
-      </div>
-  );
+    const pdfUrl = `${process.env.PUBLIC_URL}/sample.pdf`;
+
+    return (
+        <div>
+            <FlipBook pdfPath={pdfUrl} />
+        </div>
+    );
 }
 
 export default App;

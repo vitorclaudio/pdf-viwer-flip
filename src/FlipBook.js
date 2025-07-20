@@ -60,8 +60,9 @@ function FlipBook({ pdfPath }) {
         const currentPage = e.data;
         renderPage(currentPage);       // Página atual
         renderPage(currentPage + 1);   // Pré-carrega a próxima
-        renderPage(currentPage + 2);   // Pré-carrega ainda mais
-        renderPage(currentPage + 3);   // Pré-carrega ainda mais
+        renderPage(currentPage + 2); // pré-carrega ainda mais
+        renderPage(currentPage + 3); // pré-carrega ainda mais
+
     };
 
     const pages = Array.from({ length: numPages });
@@ -69,19 +70,15 @@ function FlipBook({ pdfPath }) {
     return (
         <div style={{ display: 'flex', justifyContent: 'center' }}>
             <HTMLFlipBook
-                width={600}
+                width={400}
                 height={800}
+                size="fixed"
                 onFlip={handleFlip}
             >
-                {pages.map((_, index) => (
-                    <div
-                        key={index}
-                        className="page"
-                        style={{
-                            backgroundImage: 'url("https://www.transparenttextures.com/patterns/paper-fibers.png")',
-                            backgroundSize: 'cover'
-                        }}
-                    >
+
+
+            {pages.map((_, index) => (
+                    <div key={index} className="page">
                         {pageImages[index] ? (
                             <img
                                 src={pageImages[index]}
@@ -97,8 +94,7 @@ function FlipBook({ pdfPath }) {
                                     alignItems: 'center',
                                     justifyContent: 'center',
                                     fontSize: '1.2rem',
-                                    backgroundImage: 'url("https://www.transparenttextures.com/patterns/paper-fibers.png")',
-                                    backgroundSize: 'cover'
+                                    background: '#f4f4f4'
                                 }}
                             >
                                 Carregando...
